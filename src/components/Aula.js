@@ -1,10 +1,18 @@
-import React from "react";
+import { useParams } from "react-router-dom";
+import aulas from "../data";
+
+function useAula() {
+  const id = Number(useParams().id);
+  return aulas.filter((aula) => aula.id === id)[0];
+}
 
 function Aula(props) {
+  const aula = useAula();
+
   return (
-    <div>
-      <h1>Title</h1>
-      <h3>Desc</h3>
+    <div className="aula">
+      <h1>{aula.title}</h1>
+      <h3>{aula.desc}</h3>
     </div>
   );
 }
