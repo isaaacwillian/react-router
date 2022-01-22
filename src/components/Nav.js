@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function Nav() {
   return (
     <nav>
       <h1>
-        <a href="http://localhost:3000/">Isaac</a>
+        <Link to="/">Isaac</Link>
       </h1>
       <ul>
         <li>
-          <a href="http://localhost:3000/aulas">Aulas</a>
+          <Link to="/aulas">Aulas</Link>
         </li>
-        <li>
-          <a href="http://localhost:3000/sobre">Sobre</a>
+        <li className="link">
+          <Link to="/sobre">Sobre</Link>
         </li>
       </ul>
     </nav>
