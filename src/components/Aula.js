@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
-import aulas from "../data";
+import { useSelector } from "react-redux";
 
-function useAula() {
+function useAula(aulas) {
   const id = Number(useParams().id);
   return aulas.filter((aula) => aula.id === id)[0];
 }
 
 function Aula(props) {
-  const aula = useAula();
+  const aulas = useSelector((state) => state);
+  const aula = useAula(aulas);
 
   return (
     <div className="aula">

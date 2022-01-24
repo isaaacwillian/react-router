@@ -1,7 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1.8rem 2rem;
   background-color: rgba(128, 124, 189, 0.623);
   align-items: center;
   height: 5vh;
@@ -16,6 +21,7 @@ h2 {
 }
 #aula {
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 #aula li {
   width: 100vw;
@@ -30,4 +36,29 @@ a:hover {
 }
 .aula {
   text-align: center;
+}
+#addAula {
+  position: absolute;
+  left: 1rem;
+}
+#aulaAdd {
+  text-align: center;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-areas:
+    "x x x x x x x x x aH aH aH aH aH xx xx xx xx xx xx xx xx xx"
+    "x x x x x x x x x aT aT aT aB aB xx xx xx xx xx xx xx xx xx"
+    "x x x x x x x x x aD aD aD aB aB xx xx xx xx xx xx xx xx xx";
+}
+#aulaH3 {
+  grid-area: aH;
+}
+#aulaTitle {
+  grid-area: aT;
+}
+#aulaDesc {
+  grid-area: aD;
+}
+#aulaButton {
+  grid-area: aB;
 }
